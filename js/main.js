@@ -19,10 +19,8 @@ Journal.prototype.consonants = function() {
 };
 
 Journal.prototype.getTeaser = function() {
-  var words = this.body.split(" ");
-  var sentence = words.slice(0,8);
-  var finished = sentence.join(" ");
-  return finished;
+  var words = this.body.split(" ").slice(0,8).join(" ");
+  return words;
 }
 
 exports.journalModule = Journal;
